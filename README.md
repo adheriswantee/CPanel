@@ -4,4 +4,4 @@
 
 #### Watch the video [here]()
 
-![Project humbnail](/CPanel.png)
+![Project humbnail](./CPpanel.png)
