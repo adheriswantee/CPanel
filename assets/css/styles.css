@@ -170,6 +170,7 @@ i{
 
 .dropdown-menu{
     background-color: #eef0f8;
+    gap: 0;
     margin-left: 1.5rem;
     transform: translateY(-3px);
     height: 0;
@@ -182,11 +183,11 @@ i{
     transition: transform .25s;
 }
 
-.dropdown > .list-link:focus i{
+.dropdown.active > .list-link i{
     transform: rotate(90deg);
 }
 
-.dropdown > .list-link:focus + .dropdown-menu{
+.dropdown.active .dropdown-menu{
     height: initial;
     transform: translateY(0);
     opacity: 1;
@@ -302,16 +303,16 @@ i{
     border-radius: .4rem;
 }
 
-.card-1::after{
+.border-green::after{
     background: linear-gradient(235deg, #22beaa,transparent, #171721);
 }
-.card-2::after{
+.border-yellow::after{
     background: linear-gradient(235deg, #feba5b,transparent, #171721);
 }
-.card-3::after{
+.border-orange::after{
     background: linear-gradient(235deg, #eb786c,transparent, #171721);
 }
-.card-4::after{
+.border-white::after{
     background: linear-gradient(235deg, #FFF,transparent, #171721);
 }
 
@@ -454,10 +455,10 @@ i{
     }
 
     .dropdown-menu{
-        width: 20rem;
+        width: 25rem;
         height: initial;
         background-color: var(--light-color);
-        padding: 1.25rem 0;
+        padding: 1.5rem;
         margin-left: 0;
         border-radius: .4rem;
         position: absolute;
@@ -468,13 +469,12 @@ i{
         transition: transform .25s, opacity .5s;
     }
 
-    .dropdown > .list-link:focus + .dropdown-menu{
+    .dropdown.active .dropdown-menu{
         transform: translateY(1.5rem);
     }
 
     .dropdown-menu .list-link{
         display: block;
-        border-radius: 0;
     }
 
     .card-body-link:hover{
@@ -485,19 +485,16 @@ i{
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .card-1{
+    .border-green{
         grid-column: 1/-1;
     }
 
-    .card-2{
+    .border-yellow,
+    .border-orange{
         grid-column: 1/2;
     }
 
-    .card-3{
-        grid-column: 1/2;
-    }
-
-    .card-4{
+    .border-white{
         grid-column: 2/-1;
         grid-row: 2/4;
     }

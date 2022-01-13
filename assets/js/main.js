@@ -9,3 +9,13 @@ menuToggleOpen.addEventListener('click', () => {
 menuToggleClose.addEventListener('click', () => {
     navMobileElement.classList.remove('active');
 });
+
+document.addEventListener('click', (e) => {
+    const dropdownMenu = document.querySelector('.dropdown');
+
+    if(e.target.classList.contains('dropdown-btn')){
+        dropdownMenu.classList.add('active');
+    }else{
+        dropdownMenu.classList.remove('active');
+    }
+});
